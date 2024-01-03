@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-alpbet = ''.join([chr(m) for m in range(ord('a'), ord('z') + 1)])
-# initialize an empty string to store the filtered alphabet
-filteredalpbet = ''
-for letter in alpbet:
-    if letter != 'q' and letter != 'e':
-        filteredalpbet += letter
+# generate the alphabet and filter out e and q
+filteredalpbet = ''.join([
+    letter for letter in [chr(m) for m in range(ord('a'), ord('z') + 1)]
+    if letter not in ('q', 'e')
+])
 print("{}".format(filteredalpbet), end='')
