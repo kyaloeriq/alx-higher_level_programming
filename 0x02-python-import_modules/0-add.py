@@ -2,10 +2,14 @@
 from add_0 import add
 
 
-a = 1
-b = 2
+def main():
+    a = 1
+    b = 2
 
-rslt = add(a, b)
+    rslt = add(a, b)
+
+    print("{:d} + {:d} = {:d}".format(a, b, rslt))
 
 
-print("{} + {} = {}".format(a, b, rslt))
+if __name__ == "__main__":
+    main()
