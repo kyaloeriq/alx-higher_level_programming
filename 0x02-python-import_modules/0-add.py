@@ -5,7 +5,7 @@ import add_0 as my_module
 def main():
     a = 1
     b = 2
-    print("{} + {} = {}".format(a, b, my_module.add(a, b)))
+    print("{:d} + {:d} = {:d}".format(a, b, my_module.add(a, b)))
 
 
 if __name__ == "__main__":
