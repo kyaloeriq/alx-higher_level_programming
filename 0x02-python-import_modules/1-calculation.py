@@ -3,6 +3,7 @@ import calculator_1 as my_module
 
 
 def main():
+
     a = 10
     b = 5
     # uses the two variables only, as arguments when calling functions
