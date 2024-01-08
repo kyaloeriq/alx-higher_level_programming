@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
-def print_list_integer(my_list=None):
-    my_list = my_list or []
+def print_list_integer(my_list=[]):
     for num in my_list:
         print("{}".format(num))
 
