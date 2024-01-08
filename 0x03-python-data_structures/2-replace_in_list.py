@@ -3,11 +3,10 @@
 def replace_in_list(my_list, idx, element):
 
     if idx < 0 or idx >= len(my_list):
-        return my_list
-    for i, value in enumerate(my_list):
-        if i == idx:
-            my_list[i] = element
-    return my_list
+        return my_list.copy()
+    new_list = my_list.copy()  # Copy to avoid modification of the original
+    new_list[idx] = element
+    return new_list
 
 
 if __name__ == "__main__":
@@ -16,5 +15,5 @@ if __name__ == "__main__":
     new_element = 9
     new_list = replace_in_list(my_list, idx, new_element)
 
-print(new_list)
-print(my_list)
+    print(new_list)
+    print(my_list)
