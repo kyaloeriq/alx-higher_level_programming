@@ -3,7 +3,7 @@
 def replace_in_list(my_list, idx, element):
 
     if 0 <= idx < len(my_list):
-        new_list = my_list.copy()  # Copy to avoid modification of the original
+        new_list = my_list
         new_list[idx] = element
         return new_list
     else:
