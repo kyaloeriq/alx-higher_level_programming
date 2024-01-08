@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 
 def print_matrix_integer(matrix=[[]]):
-    [print("{}".format(num)) for num in matrix]
+    for row in matrix:
+        for num in row:
+            print("{}".format(num), end=" ")
+        print()
 
 
 if __name__ == "__main__":
