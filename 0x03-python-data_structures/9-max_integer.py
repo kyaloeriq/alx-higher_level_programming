@@ -1,10 +1,6 @@
 #!/usr/bin/python3
 def max_integer(my_list=[]):
-    if len(my_list) > 0:
-        max_int = max(my_list)
-        return max_int
-    else:
-        return None
+    return max(my_list, default=None)
 
 
 if __name__ == "__main__":
