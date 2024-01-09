@@ -2,7 +2,6 @@
 def max_integer(my_list=[]):
     if len(my_list) > 0:
         max_int = max(my_list)
-        print("Max: {:d}".format(max_int))
         return max_int
     else:
         return None
