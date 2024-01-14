@@ -9,7 +9,7 @@ def uppercase(str_input):
         else:
             # Keep non-alphabetic characters unchanged
             rslt_str += char
-    print(rslt_str)
+    print("{}".format(rslt_str))
 
 
 if __name__ == "__main__":
