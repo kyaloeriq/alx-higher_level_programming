@@ -2,15 +2,12 @@
 
 def safe_print_list(my_list=[], x=0):
     count = 0
-    while x < len(my_list):
+    while count < x:
         try:
-            if my_list[x] is not None:
-                print(my_list[x], end=" ")
-                count += 1
+            print(my_list[count], end=" ")
         except IndexError:
-            print()
             break
-        x += 1
+        count += 1
     print()  # Add a new line after printing all elements
     return count
 
