@@ -6,7 +6,7 @@ def safe_function(fct, *args):
     try:
         rslt = fct(*args)
         return rslt
-    except (TypeError, ValueError, ZeroDivisionError) as a:
+    except (TypeError, ValueError, ZeroDivisionError, IndexError) as a:
         print("Exception: {}".format(a), file=sys.stderr)
         return None
 
