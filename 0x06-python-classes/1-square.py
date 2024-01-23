@@ -4,7 +4,7 @@ class Square:
     A class Square that defines a square
     """
     def __init__(self, size):
-        self.size = size
+        self.__size = size
 
 
 if __name__ == "__main__":
