@@ -2,6 +2,12 @@
 class Square:
     """
     A simple class representing a square
+
+    Attributes:
+        None
+
+    Methods:
+        None
     """
     pass
 
