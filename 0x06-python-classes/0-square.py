@@ -3,6 +3,11 @@
 class Square:
     """
     A simple class representing a square
+
+    Author:
+        [Eric Kyalo]
+    Date: 
+        [1/24/2024]
     """
     pass
 
