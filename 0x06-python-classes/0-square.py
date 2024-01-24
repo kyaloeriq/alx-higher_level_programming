@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-"""A simple class representing a square"""
+"""
+A simple class representing a square
+
+Attributes:
+    No explicit attributes defined
+"""
 class Square:
     pass
 
