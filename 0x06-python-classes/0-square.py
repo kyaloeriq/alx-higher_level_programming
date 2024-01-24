@@ -1,14 +1,6 @@
 #!/usr/bin/python3
-
+"""A simple class representing a square"""
 class Square:
-    """
-    A simple class representing a square
-
-    Author:
-        [Eric Kyalo]
-    Date: 
-        [1/24/2024]
-    """
     pass
 
 
