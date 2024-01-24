@@ -65,5 +65,3 @@ if __name__ == "__main__":
     my_square_3.my_print()
 
     print("--")
-
-
