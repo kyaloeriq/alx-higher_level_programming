@@ -2,6 +2,8 @@
 """
 A simple class representing a square
 """
+
+
 class Square:
     """
     Attributes:
