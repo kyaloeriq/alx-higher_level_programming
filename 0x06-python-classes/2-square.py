@@ -17,7 +17,7 @@ class Square:
                 raise ValueError("size must be >= 0")
             self.__size = size
         except (TypeError, ValueError) as a:
-            print(a)
+            raise(a)
 
 
 if __name__ == "__main__":
