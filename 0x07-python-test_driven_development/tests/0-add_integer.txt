@@ -20,16 +20,16 @@
 >>> add_integer(2, '3')
 Traceback (most recent call last):
 	...
-TypeError: b must be an integer
+TypeError: b must be an integer or float
 
 # Test case 6: Adding a string and an integer (should raise TypeError)
 >>> add_integer('2', 3)
 Traceback (most recent call last):
 	...
-TypeError: a must be an integer
+TypeError: a must be an integer or float
 
 # Test case 7: Adding a string and a string (should raise TypeError)
 >>> add_integer('2', '3')
 Traceback (most recent call last):
 	...
-TypeError: a must be an integer
+TypeError: a must be an integer or float
