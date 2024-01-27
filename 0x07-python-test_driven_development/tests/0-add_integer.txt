@@ -1,7 +1,10 @@
 # Test cases for the add_integer function
 
 >>> def add_integer(a, b=98):
-...     """function that adds 2 integers"""
+...     """
+...	Integers addition module
+...	if a and b are not integers, TypeError exception is raised
+...	"""
 ...     if not (isinstance(a, int) or isinstance(a, float)):
 ...         raise TypeError("a must be an integer")
 ...     if not (isinstance(b, int) or isinstance(b, float)):
