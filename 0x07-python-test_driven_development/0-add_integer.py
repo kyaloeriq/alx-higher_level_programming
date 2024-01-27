@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Integers addition module"""
+"""
+Integers addition module
+if a and b are not integers, TypeError exception is raised
+"""
 
 
 def add_integer(a, b=98):
