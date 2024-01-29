@@ -52,6 +52,14 @@ class SinglyLinkedList:
                 current = current.next_node
             new_node.next_node = current.next_node
             current.next_node = new_node
+    def __str__(self):
+        """String representation of the linked list"""
+        current = self.__head
+        output = []
+        while current:
+            output.append(str(current.data))
+            current = current.next_node
+        return '\n'.join(output)
 
 
 if __name__ == "__main__":
