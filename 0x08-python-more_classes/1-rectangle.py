@@ -19,6 +19,8 @@ class Rectangle:
         """Set the value of width with validation"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     @property
@@ -31,7 +33,6 @@ class Rectangle:
         """Set the value of height with validation"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        self.__height = value
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
