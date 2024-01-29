@@ -29,9 +29,10 @@ class Node:
     @next_node.setter
     def next_node(self, value):
         """Set the value of next_node with validation"""
-        if not isinstance(value, None):
+        if value is not None:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
+
 
 class SinglyLinkedList:
     """class defines a singly linked list"""
@@ -51,5 +52,3 @@ class SinglyLinkedList:
                 current = current.next_node
             new_node.next_node = current.next_node
             current.next_node = new_node
-        
-
