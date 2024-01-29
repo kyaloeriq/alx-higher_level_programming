@@ -66,6 +66,7 @@ if __name__ == "__main__":
     print("Area: {} - Perimeter: {}".format(
         my_rectangle.area(), my_rectangle.perimeter()))
 
+    my_rectangle.my_print()
     print(str(my_rectangle))
     print(repr(my_rectangle))
 
@@ -73,5 +74,8 @@ if __name__ == "__main__":
 
     my_rectangle.width = 10
     my_rectangle.height = 3
-    print(my_rectangle)
+    print("Area: {} - Perimeter: {}".format(
+        my_rectangle.area(), my_rectangle.perimeter()))
+    my_rectangle.my_print()
+    print(str(my_rectangle))
     print(repr(my_rectangle))
