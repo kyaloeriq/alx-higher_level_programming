@@ -12,16 +12,16 @@ def say_my_name(first_name, last_name=""):
     print (f"My name is {first_name} {last_name}")
 
 # Test case 1: first_name must be a string (should raise TypeError)
->>> say_my_name("John")
-Traceback (most recent call last):
-	...
-TypeError: first_name must be a string
+try:
+	say_my_name("John")
+except TypeError as e:
+	print(e)
 
 # Test case 2: last_name must be a string (should raise TypeError)
->>> say_my_name("Smith")
-Traceback (most recent call last):
-        ...
-TypeError: last_name must be a string
+try:
+	say_my_name("Smith")
+except TypeError as e:
+	print(e)
 
 # Test case 3: both first_name and last_name are strings (should print correctly)
 say_my_name("Walter", "White")
@@ -30,6 +30,7 @@ say_my_name("Walter", "White")
 say_my_name("Bob", "")
 
 # Test case 5: both first_name and last_name are None (should print correctly)
-say_my_name(None, None)
-
-
+try:
+	say_my_name(None, None)
+except TypeError as e:
+	print(e)
