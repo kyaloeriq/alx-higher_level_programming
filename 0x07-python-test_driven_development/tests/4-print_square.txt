@@ -17,9 +17,9 @@ def print_square(size):
 
 Test case 1: size must be an integer
 try:
-	print_square("hello")
+        print_square("hello")
 except TypeError as e:
-	print(e)
+        print(e)
 
 Test case 2: size is less than 0
 try:
