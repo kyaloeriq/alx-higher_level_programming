@@ -1,6 +1,6 @@
 import unittest
 
-from max_integer import max_integer
+from max_integer_6 import max_integer
 
 class TestMaxInteger(unittest.TestCase):
 
