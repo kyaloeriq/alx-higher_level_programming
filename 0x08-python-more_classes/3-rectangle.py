@@ -57,8 +57,8 @@ class Rectangle:
 
     def __str__(self):
         """String representation of the rectangle"""
-        return "Rectangle(width={}, height={})".format(
-                self.__width, self.__height)
+        self.my_print()
+        return ""
 
 
 if __name__ == "__main__":
@@ -68,7 +68,6 @@ if __name__ == "__main__":
 
     print(str(my_rectangle))
     print(repr(my_rectangle))
-    my_rectangle.my_print()
 
     print("--")
 
@@ -76,4 +75,3 @@ if __name__ == "__main__":
     my_rectangle.height = 3
     print(my_rectangle)
     print(repr(my_rectangle))
-    my_rectangle.my_print()
