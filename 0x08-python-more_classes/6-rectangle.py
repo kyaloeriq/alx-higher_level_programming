@@ -12,7 +12,7 @@ class Rectangle:
         """Instantiation with optional width and height"""
         self.__width = width
         self.__height = height
-        Rectangle.number_of_instances += 1 # Incremented during each instantiation
+        Rectangle.number_of_instances += 1  # Incremented during instantiation
 
     @property
     def width(self):
@@ -71,15 +71,18 @@ class Rectangle:
 
     def __del__(self):
         """instance is deleted"""
-        print("Bye rectangle...") 
-        Rectangle.number_of_instances -= 1 # Decremented during each instance deletion
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1  # instance deletion
 
 
 if __name__ == "__main__":
     my_rectangle_1 = Rectangle(2, 4)
     my_rectangle_2 = Rectangle(2, 4)
-    print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
+    print("{:d} instances of Rectangle".format(
+        Rectangle.number_of_instances))
     del my_rectangle_1
-    print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
+    print("{:d} instances of Rectangle".format(
+        Rectangle.number_of_instances))
     del my_rectangle_2
-    print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
+    print("{:d} instances of Rectangle".format(
+        Rectangle.number_of_instances))
