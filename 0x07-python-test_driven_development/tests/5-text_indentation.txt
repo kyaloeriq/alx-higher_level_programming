@@ -1,0 +1,32 @@
+# Test cases for the text_indentation function
+
+"""Text indentation module"""
+
+
+def text_indentation(text):
+    """
+    prints a text with 2 new lines after characters: ., ? and :
+    text must be a string, otherwise TypeError exception is raised
+    There should'nt be space at beginning or end of each printed line
+    """
+    if not isinstance(text, str):
+        raise TypeError("text must be a string")
+
+    punctuations = (".", "?", ":")
+    previous_char = ''
+    for char in text:
+        if char != ' ' or (char == ' ' and previous_char != ' '):
+            print(char, end='')
+        if char in punctuations:
+            print("\n\n", end='')
+        previous_char = char
+
+Test case 1: text must be a string
+try:
+        text_indentation(123)
+except TypeError as e:
+        print(e)
+
+Test case 2: There should be no space at the beginning or at the end of each printed line
+print("Test case 2:")
+text_indentation("Lorem ipsum dolor sit amet.  ")
