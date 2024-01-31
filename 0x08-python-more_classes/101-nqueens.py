@@ -88,7 +88,14 @@ if __name__ == "__main__":  # Command-line argument handling
 
     try:
         N = int(sys.argv[1])
-        nqueens(N)
+        solutions = nqueens(N)
+
+        if solutions:
+            solutions.sort()
+            for sol in solutions:
+                print(sol)
+        else:
+            print("No solutions found.")
     except ValueError:
         print("N must be a number", file=sys.stderr)
         sys.exit(1)
