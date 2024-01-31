@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""String representation module"""
+"""recreate a new instance by using eval()"""
 
 
 class Rectangle:
@@ -48,7 +48,7 @@ class Rectangle:
             return (self.__width + self.__height) * 2
 
     def my_print(self):
-        """prints in stdout the square with the character #"""
+        """prints in stdout the rectangle with the character #"""
         if self.__width == 0 or self.__height == 0:
             print()
         else:
