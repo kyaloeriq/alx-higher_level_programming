@@ -64,13 +64,14 @@ def nqueens(N):
 
     def print_solution(board):
         """
-        Print the board configuration
+        Print the positions of the queens
         """
-        for a in range(N):
-            for b in range(N):
-                print(board[a][b], end=" ")
-            print()
-
+        queens = []
+        for row in range(N):
+            for col in range(N):
+                if board[row][col] == 1:
+                    queens.append([row, col])
+        print(queens)
         print()
 
     # Initialize the board with all 0s
