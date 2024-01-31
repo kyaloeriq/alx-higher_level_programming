@@ -13,7 +13,7 @@ class Rectangle:
         """Instantiation with optional width and height"""
         self.__width = width
         self.__height = height
-        self.print_symbol = Rectangle.print_symbol  # Initialize print_symbol each instance
+        self.print_symbol = Rectangle.print_symbol  # Initialize print_symbol
         Rectangle.number_of_instances += 1  # Incremented during instantiation
 
     @property
