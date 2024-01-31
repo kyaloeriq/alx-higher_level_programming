@@ -91,11 +91,11 @@ if __name__ == "__main__":  # Command-line argument handling
         solutions = nqueens(N)
 
         if solutions:
-            solutions.sort()
+            solutions.sort()  # Sort the list of solutions
             for sol in solutions:
-                print(sol)
-        else:
-            print("No solutions found.")
+                for row in sol:
+                    print(row, end="")
+                print()
     except ValueError:
         print("N must be a number", file=sys.stderr)
         sys.exit(1)
