@@ -49,17 +49,17 @@ def nqueens(N):
         # Consider this column and try placing a queen in all rows one by one
         for a in range(N):
             if is_safe(board, a, col):
-                # Place this queen in board[i][col]
+                # Place this queen in board[a][col]
                 board[a][col] = 1
 
                 # Recur to place the rest of the queens
                 solve_nqueens_util(board, col + 1)
 
-                # If placing queen in board[i][col] doesn't lead to a solution,
-                # then remove the queen from board[i][col]
+                # If placing queen in board[a][col] doesn't lead to a solution,
+                # then remove the queen from board[a][col]
                 board[a][col] = 0
 
-        # If queen can not be placed in any row in this column col, then return False
+        # If queen can not be placed in row in this column col
         return False
 
     def print_solution(board):
@@ -89,5 +89,5 @@ if __name__ == "__main__":  # Command-line argument handling
         N = int(sys.argv[1])
         nqueens(N)
     except ValueError:
-        print("Invalid value for N. N must be an integer.", file=sys.stderr)
+        print("N must be a number", file=sys.stderr)
         sys.exit(1)
