@@ -27,6 +27,6 @@ try:
 except TypeError as e:
         print(e)
 
-Test case 2: There should be no space at the beginning or at the end of each printed line
+Test case 2: There should be no space at beginning or at end of each line
 print("Test case 2:")
 text_indentation("Lorem ipsum dolor sit amet.  ")
