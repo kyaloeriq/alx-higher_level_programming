@@ -24,7 +24,7 @@ except TypeError as e:
 Test case 2: size is less than 0
 try:
 	print_square(-10)
-except TypeError as e:
+except ValueError as e:
 	print(e)
 
 Test case 3: size is a float and is less than 0
