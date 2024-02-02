@@ -27,6 +27,12 @@ try:
 except TypeError as e:
         print(e)
 
-Test case 2: There should be no space at beginning or at end of each line
-print("Test case 2:")
+Test case 2: text not being a string
+try:
+        text_indentation(123)
+except TypeError as e:
+        print(e)
+
+Test case 3: There should be no space at beginning or at end of each line
+print("Test case 3:")
 text_indentation("Lorem ipsum dolor sit amet.  ")
