@@ -18,7 +18,9 @@ def text_indentation(text):
             print(char, end='')
         if char in punctuations:
             print("\n\n", end='')
-        previous_char = char
+            previous_char = ''
+        else:
+            previous_char = char
 
 
 if __name__ == "__main__":
