@@ -32,3 +32,9 @@ try:
 	print_square(-4.5)
 except TypeError as e:
 	print(e)
+
+Test case 4: size being a positive integer
+try:
+    print_square(5)
+except Exception as e:
+	print(e)
