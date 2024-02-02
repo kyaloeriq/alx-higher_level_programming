@@ -40,5 +40,5 @@ def matrix_mul(m_a, m_b):
 
 
 if __name__ == "__main__":
-    [[7, 10], [15, 22]]
-    [[13, 16]]
+    print(matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
+    print(matrix_mul([[1, 2]], [[3, 4], [5, 6]]))
