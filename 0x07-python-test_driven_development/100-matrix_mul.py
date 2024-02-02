@@ -6,6 +6,12 @@ def matrix_mul(m_a, m_b):
     """
     function that multiplies 2 matrices
     m_a and m_b must be an list of lists of integers or floats
+    if m_a or m_b is not a list, a TypeError exception is raised
+    if m_a or m_b is not a list of lists, a TypeError exception is raised
+    if m_a or m_b is empty, a TypeError exception is raised
+    if one element of those list of lists is not an integer or a float, a TypeError exception is raised
+    if m_a or m_b is not a rectangle, a TypeError exception is raised
+    If m_a and m_b can’t be multiplied, a ValueError exception is raised
     """
     if not isinstance(m_a, list):
         raise TypeError("m_a must be a list")
