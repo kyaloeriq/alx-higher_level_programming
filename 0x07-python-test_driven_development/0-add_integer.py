@@ -7,6 +7,7 @@ def add_integer(a, b=98):
     function that adds 2 integers
     if a and b are not integers, TypeError exception is raised
     a and b must be first casted to integers if they are float
+    Returns an integer: the addition of a and b
     """
     if not (isinstance(a, int) or isinstance(a, float)):
         raise TypeError("a must be an integer")
