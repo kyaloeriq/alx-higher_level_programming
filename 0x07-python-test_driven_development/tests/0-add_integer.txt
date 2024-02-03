@@ -1,21 +1,12 @@
 # Test cases for the add_integer function
 
 >>> def add_integer(a, b=98):
-	"""
-	function that adds 2 integers
-	if a and b are not integers, TypeError exception is raised
-	a and b must be first casted to integers if they are float
-	Returns an integer: the addition of a and b
-	"""
-	if not (isinstance(a, int) or isinstance(a, float)):
-		raise TypeError("a must be an integer")
-	if not (isinstance(b, int) or isinstance(b, float)):
-		raise TypeError("b must be an integer")
-	if isinstance(a, float):
-		a = int(a)
-	if isinstance(b, float):
-		b = int(b)
-	return a + b
+...	"""
+...	function that adds 2 integers
+...	if a and b are not integers, TypeError exception is raised
+...	a and b must be first casted to integers if they are float
+...	Returns an integer: the addition of a and b
+...	"""
 
 # Test case 1: Adding two positive integers
 >>> add_integer(1, 2)
