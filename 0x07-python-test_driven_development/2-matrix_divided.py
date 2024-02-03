@@ -1,16 +1,14 @@
 #!/usr/bin/python3
-"""
-Divides all elements of a matrix by a given number
-it is a list of lists of integers/floats, otherwise TypeError is raised
-rows of matrix must be of the same size, otherwise TypeError is raised
-div must be a number (integer or float), otherwise TypeError is raised
-div can’t be equal to 0, otherwise ZeroDivisionError is raised
-"""
+"""Divides all elements of a matrix by a given number"""
 
 
 def matrix_divided(matrix, div):
     """
     divides all elements of a matrix
+    it is a list of lists of integers/floats, otherwise TypeError is raised
+    rows of matrix must be of the same size, otherwise TypeError is raised
+    div must be a number (integer or float), otherwise TypeError is raised
+    div can’t be equal to 0, otherwise ZeroDivisionError is raised
     Arguments:
         matrix: Matrix to be divided
         div: Number to divide the matrix by
