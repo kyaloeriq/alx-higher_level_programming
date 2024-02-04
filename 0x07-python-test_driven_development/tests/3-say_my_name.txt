@@ -19,7 +19,7 @@ My name is Walter White
 >>> try:
 ...     say_my_name(123)
 ... except TypeError as e:
-...     assert str(e) == "first_name must be a string"
+...     print(e)
 
 # Test case 3: last_name must be a string (should raise TypeError)
 >>> try:
