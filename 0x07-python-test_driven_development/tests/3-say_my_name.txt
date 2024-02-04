@@ -1,35 +1,35 @@
 # Test cases for the say_my_name function
 
 >>> def say_my_name(first_name, last_name=""):
-	"""
-	function that prints My name is <first name> <last name>
-	first_name and last_name must be strings otherwise, a TypeError exception is raised
-	"""
-	if not isinstance(first_name, str):
-		raise TypeError("first_name must be a string")
-	if not isinstance(last_name, str):
-  	     	raise TypeError("last_name must be a string")
-	print (f"My name is {first_name} {last_name}")
+...	"""
+...	function that prints My name is <first name> <last name>
+...	first_name and last_name must be strings otherwise, a TypeError exception is raised
+...	"""
+...	if not isinstance(first_name, str):
+...		raise TypeError("first_name must be a string")
+...	if not isinstance(last_name, str):
+...  	     	raise TypeError("last_name must be a string")
+...	print (f"My name is {first_name} {last_name}")
 
 # Test case 1: both first_name and last_name are strings (should print correctly)
 >>> say_my_name("Walter", "White")
-'My name is Walter White'
+My name is Walter White
 
 # Test case 2: first_name must be a string (should raise TypeError)
->>> say_my_name("123")
-Traceback (most recent call last):
-    ...
-TypeError: first_name must be a string
+>>> try:
+...	say_my_name(123)
+... except TypeError as e:
+...	assert str(e) == "first_name must be a string"
 
 # Test case 3: last_name must be a string (should raise TypeError)
->>> say_my_name("John", 123)
-Traceback (most recent call last):
-    ...
-TypeError: last_name must be a string
+>>> try:
+...	say_my_name("John", 123)
+... except TypeError as e:
+... 	assert str(e) == "last_name must be a string"
 
 # Test case 4: empty string as last_name (should print correctly)
 >>> say_my_name("Bob", "")
-'My name is Bob '
+My name is Bob 
 
 # Test case 5: both first_name and last_name are None (should raise TypeError)
 >>> say_my_name(None, None)
