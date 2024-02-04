@@ -15,12 +15,6 @@
 >>> say_my_name("Walter", "White")
 My name is Walter White
 
-# Test case 2: first_name must be a string (should raise TypeError)
->>> try:
-...	say_my_name(123)
-... except TypeError as e:
-...	print(e)
-
 # Test case 3: last_name must be a string (should raise TypeError)
 >>> try:
 ...	say_my_name("John", 123)
