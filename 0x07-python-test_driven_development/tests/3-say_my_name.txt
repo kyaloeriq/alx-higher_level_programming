@@ -16,7 +16,7 @@
 
 	# Test case 2: first_name must be a string (should raise TypeError)
 	try:
-		say_my_name("John")
+		say_my_name("123")
 	except TypeError as e:
 		print(e)
 
