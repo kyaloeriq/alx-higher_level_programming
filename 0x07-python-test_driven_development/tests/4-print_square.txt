@@ -37,6 +37,15 @@ except TypeError as e:
 
 Test case 4: size being a positive integer
 print_square(5)
+#####
+#####
+#####
+#####
+#####
 
 Test case 5: size being a positive integer
-print_square()
+>>> try:
+...     print_square()
+... except TypeError as e:
+...     print(e)
+print_square() missing 1 required positional argument: 'size'
