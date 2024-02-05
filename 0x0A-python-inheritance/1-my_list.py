@@ -9,8 +9,9 @@ class MyList(list):
         function that prints the list, but sorted (ascending sort)
         all the elements of the list will be of type int
         """
-        sorted_list = sorted(self)
-        print(sorted_list)
+        if all(isinstance(x, int) for x in self):
+            sorted_list = sorted(self)
+            print(sorted_list)
 
 
 if __name__ == "__main__":
