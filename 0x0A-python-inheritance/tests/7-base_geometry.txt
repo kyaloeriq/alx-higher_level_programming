@@ -15,17 +15,22 @@ class BaseGeometry:
             raise ValueError(f"{name} must be greater than 0")
 
 # Test case 1: public instance method that raises an Exception
->>> def area(self)
-area() is not implemented
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+    ...
+Exception: area() is not implemented
 
 # Test case 2: value is not an integer
->>> def integer_validator(self, name, value)
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", "John")
 Traceback (most recent call last):
     ...
 TypeError: name must be an integer
 
 # Test case 3: value is greater than 0
->>> def integer_validator(self, name, value)
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
     ...
 ValueError: age must be greater than 0
