@@ -1,16 +1,6 @@
 #Test cases for the class MyList that inherits from list
 
->>> class MyList(list):
-    """list class"""
-    def print_sorted(self):
-        """
-        prints the list, but sorted (ascending sort)
-        all the elements of the list will be of type int
-        """
-        sorted_list = sorted(self)
-        print(sorted_list)
-
-# Test case 1: list, but sorted (ascending sort)
+# Test case 1: Sorting a list
 >>> my_list = MyList([4, 2, 1, 3, 5])
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
