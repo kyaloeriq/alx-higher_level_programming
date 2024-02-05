@@ -7,6 +7,10 @@
 ...	"""
 ...	prints the list, but sorted (ascending sort)
 ...	all the elements of the list will be of type int
+...         
+...     >>> my_list = MyList([4, 2, 1, 3, 5])
+...     >>> my_list.print_sorted()
+...	[1, 2, 3, 4, 5]
 ...	"""
 ...	sorted_list = sorted(self)
 ...	print(sorted_list)
