@@ -8,8 +8,9 @@ def read_file(filename=""):
     the with statement must be used
     no need to manage file permission or file doesn't exist exceptions
     """
-    with open(filename="", encoding="utf-8") as j:
-        read_data = j.read()
+    with open(filename, encoding="utf-8") as j:
+        read_data = j.read().rstrip()
+        print(read_data)
 
 
 if __name__ == "__main__":
