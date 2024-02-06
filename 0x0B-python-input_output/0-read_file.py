@@ -8,12 +8,9 @@ def read_file(filename=""):
     the with statement must be used
     no need to manage file permission or file doesn't exist exceptions
     """
-    try:
-        with open(filename, encoding="utf-8") as j:
-            read_data = j.read().rstrip()
-            print(read_data)
-    except FileNotFoundError:
-        pass
+    with open(filename, encoding="utf-8") as j:
+        read_data = j.read()
+        print(read_data, end='')
 
 
 
