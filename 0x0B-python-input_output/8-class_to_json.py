@@ -1,0 +1,40 @@
+#!/usr/bin/python3
+"""dictionary description for JSON serialization of an object module"""
+
+import json
+
+
+""" My class module
+"""
+
+class MyClass:
+    """ My class
+    """
+
+    def __init__(self, name):
+        self.name = name
+        self.number = 0
+
+    def __str__(self):
+        return "[MyClass] {} - {:d}".format(self.name, self.number)
+
+    @staticmethod
+    def class_to_json(obj):
+        """
+        returns the dictionary description with simple data structure,
+        (list, dictionary, string, integer and boolean) for JSON serialization of an object
+        obj is an instance of a Class
+        attributes of the obj Class are serializable
+        """
+        return json.dumps(obj.__dict__)
+
+
+if __name__ == "__main__":
+    m = MyClass("John")
+    m.number = 89
+    print(type(m))
+    print(m)
+
+    mj = MyClass.class_to_json(m)
+    print(type(mj))
+    print(mj)
