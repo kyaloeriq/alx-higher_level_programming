@@ -7,6 +7,7 @@ import json
 """ My class module
 """
 
+
 class MyClass:
     """ My class
     """
@@ -22,7 +23,7 @@ class MyClass:
     def class_to_json(obj):
         """
         returns the dictionary description with simple data structure,
-        (list, dictionary, string, integer and boolean) for JSON serialization of an object
+        (list, dict, string, integer, boolean)for JSON serialization of obj
         obj is an instance of a Class
         attributes of the obj Class are serializable
         """
