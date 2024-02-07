@@ -40,3 +40,52 @@ TypeError: name must be an integer
 Traceback (most recent call last):
     ...
 ValueError: age must be greater than 0
+
+# Test case 4: Check instantiation
+>>> bg = BaseGeometry()
+
+# Test cases for integer_validator() method
+try:
+    bg.integer_validator("age", 1)
+except Exception as e:
+    integer_validator_1_msg = str(e)
+
+try:
+    bg.integer_validator("age", 0)
+except Exception as e:
+    integer_validator_0_msg = str(e)
+
+try:
+    bg.integer_validator("age", -4)
+except Exception as e:
+    integer_validator_neg_msg = str(e)
+
+try:
+    bg.integer_validator("age", "4")
+except Exception as e:
+    integer_validator_str_msg = str(e)
+
+try:
+    bg.integer_validator("age", (4,))
+except Exception as e:
+    integer_validator_tuple_msg = str(e)
+
+try:
+    bg.integer_validator("age", [3])
+except Exception as e:
+    integer_validator_list_msg = str(e)
+
+try:
+    bg.integer_validator("age", True)
+except Exception as e:
+    integer_validator_bool_msg = str(e)
+
+try:
+    bg.integer_validator("age", {3, 4})
+except Exception as e:
+    integer_validator_set_msg = str(e)
+
+try:
+    bg.integer_validator("age", None)
+except Exception as e:
+    integer_validator_none_msg = str(e)
