@@ -29,11 +29,11 @@ class Rectangle(BaseGeometry):
         """Instantiation with width and height"""
         self.integer_validator("width", width)
         self.integer_validator("height", height)
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
     def __str__(self):
-        return f"<{self.__class__.__name__} ({self.width})/{self.height}>"
+        return f"<{self.__class__.__name__} ({self.__width})/{self.__height}>"
 
     def area(self):
         return self.__width * self.__height
