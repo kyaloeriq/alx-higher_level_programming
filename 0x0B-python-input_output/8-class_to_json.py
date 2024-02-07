@@ -25,11 +25,10 @@ class MyClass:
         obj is an instance of a Class
         attributes of the obj Class are serializable
         """
-        serialized = "{"
-        serialized += '"name": "{}", '.format(obj.name)
-        serialized += '"number": {:d}'.format(obj.number)
-        serialized += "}"
-        return serialized
+        return {
+            "name": obj.name,
+            "number": obj.number
+        }
 
 
 if __name__ == "__main__":
