@@ -9,6 +9,7 @@ class BaseGeometry:
     def area(self):
         """public instance method that raises an Exception"""
         raise Exception("area() is not implemented")
+
     def integer_validator(self, name, value):
         """
         you can assume name is always a string
@@ -25,7 +26,7 @@ class BaseGeometry:
 if __name__ == "__main__":
     bg = BaseGeometry()
 
-    bg.integer_validator("my_int", 12)
+    g.integer_validator("my_int", 12)
     bg.integer_validator("width", 89)
 
     try:
