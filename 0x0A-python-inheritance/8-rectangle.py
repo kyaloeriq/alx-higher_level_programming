@@ -33,7 +33,7 @@ class Rectangle(BaseGeometry):
         self.__height = height
 
     def __str__(self):
-        return f"<{self.__class__.__name__} ({self.__width})/{self.__height}>"
+        return f"<{self.__class__.__module__}.{self.__class__.__name__} object at {hex(id(self))}>"
 
     def area(self):
         return self.__width * self.__height
