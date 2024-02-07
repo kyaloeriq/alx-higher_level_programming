@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """dictionary description for JSON serialization of an object module"""
 
-import json
-
 
 """ My class module
 """
