@@ -43,7 +43,7 @@ class Square(Rectangle):
     """class Square that inherits Rectangle"""
     def __init__(self, size):
         """Instantiation with size"""
-        self.integer_validator("size", size)
+        super().__init__(size, size) # Call parent constructor 
         self.__size = size
 
     def __str__(self):
