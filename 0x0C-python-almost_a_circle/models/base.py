@@ -19,6 +19,10 @@ class Base:
     def id(self):
         return self.__id
 
+    def set_id(self, new_id):
+        """Method to set the id"""
+        self.__id = new_id
+
 
 if __name__ == "__main__":
     b1 = Base()
