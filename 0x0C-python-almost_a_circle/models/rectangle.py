@@ -8,7 +8,7 @@ class Rectangle(Base):
 
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        super().__init__(id)
+        super().__init__(id)  # Let the Base class handle id assignment
         self.width = width
         self.height = height
         self.x = x
@@ -78,7 +78,7 @@ class Rectangle(Base):
         """assigns a key/value argument to attributes"""
         if args:
             if len(args) >= 1:
-                self.__id = args[0]  # Set ID if provided
+                self.id = args[0]  # Set ID if provided
             if len(args) >= 2:
                 self.width = args[1]
             if len(args) >= 3:
@@ -89,9 +89,7 @@ class Rectangle(Base):
                 self.y = args[4]
         else:
             for key, value in kwargs.items():
-                if key == 'id':
-                    self.__id = value
-                elif key == 'width':
+                if key == 'width':
                     self.width = value
                 elif key == 'height':
                     self.height = value
