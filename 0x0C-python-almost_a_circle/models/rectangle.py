@@ -8,12 +8,14 @@ class Rectangle(Base):
 
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Class constructor"""
         super().__init__(id)  # Let the Base class handle id assignment
         self.width = width
         self.height = height
         self.x = x
         self.y = y
 
+    """private attributes with getter/setter"""
     @property
     def width(self):
         return self.__width
@@ -63,15 +65,18 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """returns the area value of the Rectangle instance"""
         return self.__width * self.__height
 
     def display(self):
+        """prints in stdout the Rectangle instance with character#"""
         for _ in range(self.__y):
             print()
         for _ in range(self.__height):
             print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
+        """overriding the __str__ method"""
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
