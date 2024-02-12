@@ -6,7 +6,7 @@ from rectangle import Rectangle
 class Square(Rectangle):
     """class Square that inherits from Rectangle"""
     def __init__(self, size, x=0, y=0, id=None):
-        super().__init__(size, size, x, y, id)  # Let the Base class handle id assignment
+        super().__init__(size, size, x, y, id)  # Base handles id assignment
 
     @property
     def size(self):
