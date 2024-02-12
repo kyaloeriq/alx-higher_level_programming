@@ -6,7 +6,6 @@ from base import Base
 class Rectangle(Base):
     """class Rectangle that inherits from Base"""
 
-
     def __init__(self, width, height, x=0, y=0, id=None):
         """Class constructor"""
         super().__init__(id)  # Let the Base class handle id assignment
@@ -77,7 +76,9 @@ class Rectangle(Base):
 
     def __str__(self):
         """overriding the __str__ method"""
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return (f"[Rectangle]({self.id}) "
+                f"{self.__x}/{self.__y} - "
+                f"{self.__width}/{self.__height}")
 
     def update(self, *args, **kwargs):
         """assigns a key/value argument to attributes"""
@@ -105,7 +106,7 @@ class Rectangle(Base):
                 elif key == 'y':
                     self.y = value
 
-        
+
 if __name__ == "__main__":
 
     r1 = Rectangle(10, 10, 10, 10)
