@@ -78,7 +78,7 @@ class Rectangle(Base):
         """assigns a key/value argument to attributes"""
         if args:
             if len(args) >= 1:
-                self.id = args[0]  # Set ID if provided
+                setattr(self, 'id', args[0])  # Set ID if provided
             if len(args) >= 2:
                 self.width = args[1]
             if len(args) >= 3:
@@ -89,7 +89,9 @@ class Rectangle(Base):
                 self.y = args[4]
         else:
             for key, value in kwargs.items():
-                if key == 'width':
+                if key == 'id':
+                    setattr(self, 'id', value)
+                elif key == 'width':
                     self.width = value
                 elif key == 'height':
                     self.height = value
