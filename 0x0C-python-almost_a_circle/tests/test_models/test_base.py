@@ -1,7 +1,7 @@
 import unittest
 from base import Base
 
-class testBase(unittest.TestCase):
+class TestBase(unittest.TestCase):
 
     def test_id(self):
         # Test if ids are properly generated
