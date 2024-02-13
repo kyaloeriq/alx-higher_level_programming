@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""class Base Module"""
+"""The base Module"""
 
 
 class Base:
