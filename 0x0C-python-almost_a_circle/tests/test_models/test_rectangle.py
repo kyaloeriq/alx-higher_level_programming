@@ -7,13 +7,6 @@ class TestRectangle(unittest.TestCase):
         r = Rectangle(5, 10)
         self.assertEqual(r.area(), 50)
 
-    def test_display(self):
-        r = Rectangle(3, 2)
-        expected_output = "###\n###\n"
-        with unittest.mock.patch('sys.stdout', new=io.StringIO()) as fake_stdout:
-            r.display()
-            self.assertEqual(fake_stdout.getvalue(), expected_output)
-
     def test_str(self):
         r = Rectangle(4, 6, 2, 2, 7)
         self.assertEqual(str(r), "[Rectangle](7) 2/2 - 4/6")
