@@ -1,5 +1,5 @@
 import unittest
-from models.rectangle import Rectangle
+from models.rectangle import Rectangle(Base)
 
 class TestRectangle(unittest.TestCase):
     def test_area(self):
