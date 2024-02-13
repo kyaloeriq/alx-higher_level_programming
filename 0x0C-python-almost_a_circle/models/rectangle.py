@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""First Rectangle Module"""
+"""rectangle Module"""
 from base import Base
 
 
