@@ -26,6 +26,7 @@ class Square(Rectangle):
     def __str__(self):
         """provides custom string representation of square object"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
+    
     def update(self, *args, **kwargs):
         """assigns a key/value argument to attributes"""
         if args:
