@@ -1,5 +1,5 @@
 import unittest
-from square import Square  # Assuming your Square class is in square.py
+from models.square import Square
 
 class TestSquare(unittest.TestCase):
     def test_init(self):
