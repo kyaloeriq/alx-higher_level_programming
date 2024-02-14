@@ -1,5 +1,7 @@
 import unittest
 from models.rectangle import Rectangle
+from models.base import Base
+
 
 class TestRectangle(unittest.TestCase):
     def test_area(self):
@@ -19,6 +21,7 @@ class TestRectangle(unittest.TestCase):
         r = Rectangle(1, 1)
         r.update(id=4, width=8, height=6, x=2, y=4)
         self.assertEqual(str(r), "[Rectangle](4) 2/4 - 8/6")
+
 
 if __name__ == '__main__':
     unittest.main()
