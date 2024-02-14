@@ -1,5 +1,6 @@
 import unittest
 from models.square import Square
+from models.rectangle import Rectangle
 
 class TestSquare(unittest.TestCase):
     def test_init(self):
