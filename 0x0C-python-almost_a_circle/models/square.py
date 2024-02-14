@@ -10,8 +10,8 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)  # Base handles id assignment
 
     @property
-    """Provides a getter and setter method for the"""
     def size(self):
+        """Provides a getter and setter method for the size"""
         return self.width
 
     @size.setter
