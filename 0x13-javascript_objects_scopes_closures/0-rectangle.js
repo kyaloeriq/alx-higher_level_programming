@@ -1,7 +1,9 @@
 #!/usr/bin/node
 
 class Rectangle {
-  // Intentionally empty for future use
+  constructor() {
+  // Constructor is empty for now
+  }
 }
 
 // Create an instance of Rectangle
