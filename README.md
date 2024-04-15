@@ -1,1 +1,1 @@
-High level languages
+Python - Object-relational mapping
