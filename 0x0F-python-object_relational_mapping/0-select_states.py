@@ -4,6 +4,7 @@ import MySQLdb
 import sys
 
 def list_states(username, password, database_name):
+    """Fetches and prints all states from the specified database"""
     # Connecting to the MySQL server
     conn = MySQLdb.connect(host='localhost', port=3306, user=username, passwd=password, db=database_name)
     cursor = conn.cursor()
@@ -17,5 +18,3 @@ def list_states(username, password, database_name):
 
     cursor.close()
     conn.close()
-
-if __name__ == "__main__":
