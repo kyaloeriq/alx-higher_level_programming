@@ -17,3 +17,5 @@ def list_states(username, password, database_name):
 
     cursor.close()
     conn.close()
+
+if __name__ == "__main__":
