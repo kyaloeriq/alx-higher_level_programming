@@ -20,3 +20,16 @@ def list_states(username, password, database_name):
 
     cursor.close()
     conn.close()
+if __name__ == "__main__":
+    # Check if correct number of arguments are provided
+    if len(sys.argv) != 4:
+        print("Usage: python script.py <mysql_username> <mysql_password> <database_name>")
+        sys.exit(1)
+
+    # Get MySQL credentials from command line arguments
+    mysql_username = sys.argv[1]
+    mysql_password = sys.argv[2]
+    database_name = sys.argv[3]
+
+    # Call function to list states
+    list_states(mysql_username, mysql_password, database_name)
