@@ -10,8 +10,13 @@ def list_states(username, password, database_name):
     cursor = None
     try:
         # Connecting to the MySQL server
-        conn = MySQLdb.connect(host='localhost', port=3306,
-                               user=username, passwd=password, db=database_name)
+        conn = MySQLdb.connect(
+            host='localhost',
+            port=3306,
+            user=username,
+            passwd=password,
+            db=database_name
+        )
         cursor = conn.cursor()
 
         # Query to fetch states
@@ -33,7 +38,9 @@ def list_states(username, password, database_name):
 if __name__ == "__main__":
     # Check if correct number of arguments are provided
     if len(sys.argv) != 4:
-        print("Usage: python script.py <mysql_username> <mysql_password> <database_name>")
+        print(
+            "script.py <mysql_username> <mysql_password> <database_name>"
+        )
         sys.exit(1)
 
     # Get MySQL credentials from command line arguments
