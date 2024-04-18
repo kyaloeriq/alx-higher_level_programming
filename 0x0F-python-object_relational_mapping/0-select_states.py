@@ -6,20 +6,30 @@ import sys
 
 def list_states(username, password, database_name):
     """Fetches and prints all states from the specified database"""
-    # Connecting to the MySQL server
-    conn = MySQLdb.connect(host='localhost', port=3306,
-                           user=username, passwd=password, db=database_name)
-    cursor = conn.cursor()
+    conn = None
+    cursor = None
+    try:
+        # Connecting to the MySQL server
+        conn = MySQLdb.connect(host='localhost', port=3306,
+                               user=username, passwd=password, db=database_name)
+        cursor = conn.cursor()
 
-    # Query to fetch states
-    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
-    states = cursor.fetchall()
+        # Query to fetch states
+        cursor.execute("SELECT id, name FROM states ORDER BY id ASC")
+        states = cursor.fetchall()
 
-    for state in states:
-        print(state)
+        for state in states:
+            print(state)
 
-    cursor.close()
-    conn.close()
+    except MySQLdb.Error as e:
+        print(f"Error connecting to MySQL: {e}")
+    finally:
+        if cursor:
+            cursor.close()
+        if conn:
+            conn.close()
+
+
 if __name__ == "__main__":
     # Check if correct number of arguments are provided
     if len(sys.argv) != 4:
