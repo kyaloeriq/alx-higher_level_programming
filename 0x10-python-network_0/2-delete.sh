@@ -1,3 +1,3 @@
 #!/bin/bash
-# sends DELETE request using curl and display response body
-curl -X DELETE -i "$1" | sed '1,/\r\{0,1\}$/d'
+# sends DELETE request using curl and displays response body
+curl -X DELETE -s -o response_body.txt -w "%{http_code}" "$1" && cat response_body.txt
