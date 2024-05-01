@@ -1,3 +1,3 @@
 #!/bin/bash
 # Script that takes in a URL, sends a GET request to the URL, and displays the body of the response
-redirect=$(curl -s -D - "$1" | awk '/^HTTP/{c=$2} END{print c~/^3/?(c~/^30[0-9]$/?5:1):0}')
+response=$(curl -s -o /dev/null -w "%{http_code}" $1) && [ $response -eq 200 ] && curl -s $1
