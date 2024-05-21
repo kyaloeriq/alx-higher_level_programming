@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Python script that takes in a URL, sends request to the URL, displays value of the X-Request-Id variable found in the response.
+script takes URL, sends request to the URL, displays value X-Request-Id value
 """
 
 import urllib.request
@@ -9,7 +9,7 @@ import sys
 
 def main():
     """
-    Sends a request to the URL, prints value of the X-Request-Id variable in the header of the response.
+    Sends request to URL, prints value of the X-Request-Id variable
     """
     url = sys.argv[1]  # Get the URL from the command-line arguments
 
