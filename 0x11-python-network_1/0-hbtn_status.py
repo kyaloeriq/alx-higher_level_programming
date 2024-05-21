@@ -17,10 +17,10 @@ def main():
 
     utf8_content = html.decode('utf-8')
 
-    print("- Body response:")
-    print("\t- type:", type(html))
-    print("\t- content:", html)
-    print("\t- utf8 content:", utf8_content)
+    print("Body response:")
+    print("\t- type: {}".format(type(html)))
+    print("\t- content: {}".format(html))
+    print("\t- utf8 content: {}".format(utf8_content))
 
 
 if __name__ == "__main__":
