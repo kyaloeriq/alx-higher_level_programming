@@ -4,14 +4,13 @@ const path = process.argv[2];
 const content = process.argv[3];
 
 if (!path || !content) {
-  console.error("Usage: node script.js <file_path> <string_to_write>");
+  console.error('Usage: node script.js <file_path> <string_to_write>');
   process.exit(1);
 }
 
 fs.writeFile(path, content, 'utf8', (err) => {
   if (err) {
-    console.error("An error occurred:", err);
+    console.error(err);
     return;
   }
-  console.log(`Successfully wrote to ${path}`);
 });
