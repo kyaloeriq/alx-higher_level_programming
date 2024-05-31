@@ -15,7 +15,7 @@ request.get(url, (error, response, body) => {
     console.error('An error occurred:', error);
     return;
   }
-  
+
   if (response.statusCode !== 200) {
     console.error(`Failed to fetch data, status code: ${response.statusCode}`);
     return;
@@ -28,4 +28,3 @@ request.get(url, (error, response, body) => {
     console.error('Error parsing JSON:', parseError);
   }
 });
-
