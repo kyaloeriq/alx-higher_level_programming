@@ -26,7 +26,8 @@ function countCompletedTasks (apiUrl) {
     });
 
     // Printing users with completed tasks and their counts
-    console.log(JSON.stringify(userCompletedTasks, null, 2));
+    const formattedOutput = JSON.stringify(userCompletedTasks, null, 2);
+    console.log(formattedOutput);
   });
 }
 
