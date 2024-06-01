@@ -25,11 +25,4 @@ if (!movieId) {
   process.exit(1);
 }
 
-const movieIdInt = parseInt(movieId);
-
-if (isNaN(movieIdInt)) {
-  console.log('The movie ID must be an integer.');
-  process.exit(1);
-}
-
-getStarWarsMovieTitle(movieIdInt);
+getStarWarsMovieTitle(movieId);
