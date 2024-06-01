@@ -27,7 +27,7 @@ function countCompletedTasks(apiUrl) {
 
         // Printing users with completed tasks and their counts
         for (let userId in userCompletedTasks) {
-            console.log(`{'${userId}': ${userCompletedTasks[userId]},}`);
+            console.log(`'${userId}': ${userCompletedTasks[userId]},`);
         }
     });
 }
