@@ -26,11 +26,9 @@ function countCompletedTasks (apiUrl) {
     });
 
     // Printing users with completed tasks and their counts
-    for (const userId in userCompletedTasks) {
-      console.log(`'${userId}': ${userCompletedTasks[userId]},`);
-    }
+    console.log(JSON.stringify(userCompletedTasks, null, 2));
   });
 }
 
-const apiUrl = 'https://jsonplaceholder.typicode.com/todos';
+const apiUrl = process.argv[2];
 countCompletedTasks(apiUrl);
