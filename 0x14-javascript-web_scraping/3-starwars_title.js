@@ -1,16 +1,16 @@
 #!/usr/bin/node
 const request = require('request');
 
-const movieId = process.argv[2];
+const apiUrl = process.argv[2];
 
-if (!movieId) {
-  console.error('Usage: node getStarWarsMovie.js <movie_id>');
+if (!apiUrl) {
+  console.error('Usage: node getStarWarsMovie.js <apiUrl>');
   process.exit(1);
 }
 
-const url = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
+const wedgeId = `https://swapi-api.alx-tools.com/api/people/18/';
 
-request.get(url, (error, response, body) => {
+request.get(apiUrl, (error, response, body) => {
   if (error) {
     console.error('An error occurred:', error);
     return;
@@ -23,7 +23,16 @@ request.get(url, (error, response, body) => {
 
   try {
     const data = JSON.parse(body);
-    console.log(data.title);
+    const films = data.results;
+    let wedgeCount = 0;
+
+    films.forEach((film) => {
+      if (film.characters.includes(wedgeId)) {
+        wedgeCount++;
+      }
+    });
+
+    console.log(wedgeCount);
   } catch (parseError) {
     console.error('Error parsing JSON:', parseError);
   }
