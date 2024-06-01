@@ -37,4 +37,3 @@ request.get(apiUrl, (error, response, body) => {
     console.error('Error parsing JSON:', parseError);
   }
 });
-
