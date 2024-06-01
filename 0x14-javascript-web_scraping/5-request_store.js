@@ -13,7 +13,7 @@ function fetchAndSaveWebpage (url, filePath) {
       fs.writeFile(filePath, body, 'utf8', (err) => {
         if (err) {
           console.error('Error writing to file:', err);
-	}
+        }
       });
     }
   });
