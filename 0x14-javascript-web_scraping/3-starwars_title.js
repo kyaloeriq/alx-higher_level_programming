@@ -11,7 +11,7 @@ function getStarWarsMovieTitle (movieId) {
     }
 
     if (response.statusCode === 200) {
-      console.log(`The title of the Star Wars movie with episode number ${movieId} is '${body.title}'.`);
+      console.log(`${body.title}.`);
     } else {
       console.log(`No movie found with episode number ${movieId}.`);
     }
