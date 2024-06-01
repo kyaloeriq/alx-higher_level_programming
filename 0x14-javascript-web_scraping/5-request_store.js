@@ -2,7 +2,7 @@
 const request = require('request');
 const fs = require('fs');
 
-function fetchAndSaveWebpage(url, filePath) {
+function fetchAndSaveWebpage (url, filePath) {
   request(url, { encoding: 'utf8' }, (error, response, body) => {
     if (error) {
       console.error('Error fetching the webpage:', error);
