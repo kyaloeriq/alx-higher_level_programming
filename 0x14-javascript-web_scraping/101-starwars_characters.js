@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const request = require('request');
 
-function fetchCharacterName(url) {
+function fetchCharacterName (url) {
   return new Promise((resolve, reject) => {
     request(url, (error, response, body) => {
       if (error) {
@@ -17,7 +17,7 @@ function fetchCharacterName(url) {
   });
 }
 
-function printCharacters(movieId) {
+function printCharacters (movieId) {
   const apiUrl = `https://swapi.dev/api/films/${movieId}/`;
 
   request(apiUrl, async (error, response, body) => {
@@ -52,4 +52,3 @@ if (!movieId) {
 }
 
 printCharacters(movieId);
-
